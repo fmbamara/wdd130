@@ -1,0 +1,196 @@
+/* rafting.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@700&display=swap');
+
+:root {
+  /* Color Palette */
+  --primary-color: #1A4F52;    /* Dark Teal */
+  --secondary-color: #39974B;  /* Green */
+  --accent1-color: #E76731;    /* Burnt Orange */
+  --accent2-color: #FFFFFF;    /* White */
+
+  /* Typography */
+  --heading-font: 'Roboto Slab', serif;
+  --text-font: 'Roboto', sans-serif;
+}
+
+/* Universal Box Model Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: var(--text-font);
+    color: var(--primary-color);
+    background-color: #f4f4f4; /* A light gray background for contrast */
+}
+
+/* Page Layout Styles */
+header, main, footer {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: var(--accent2-color);
+}
+
+/* Header Styles */
+header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 3px solid var(--accent1-color);
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav a:hover {
+    background-color: var(--accent1-color);
+    color: var(--accent2-color);
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    padding: 1rem;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 2px solid var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* General Element Spacing */
+p {
+    padding: 0 1rem 1rem 1rem; /* Add padding to paragraphs */
+    line-height: 1.6;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--accent2-color);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    background-color: rgba(26, 79, 82, 0.8); /* Primary color with transparency */
+    color: var(--accent2-color);
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.hero article img {
+    float: right;
+    width: 120px;
+    height: auto;
+    margin-left: 1rem;
+    border: 2px solid var(--accent2-color);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Added box shadow */
+}
+
+/* History Section */
+.history {
+    padding: 2rem 1rem;
+}
+
+/* Adventures Section */
+.adventures {
+    padding: 1rem;
+}
+
+.adventures h2 {
+    margin-bottom: 2rem;
+}
+
+.adventures div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.adventures img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.adventures img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Footer Styles */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    border-top: 3px solid var(--accent1-color);
+}
+
+footer .socialmedia {
+    display: flex;
+    gap: 1rem;
+}
+
+footer .socialmedia a {
+    text-decoration: none;
+}
+
+footer .socialmedia img {
+    width: 40px;
+    transition: transform 0.3s;
+}
+
+footer .socialmedia img:hover {
+    transform: scale(1.2);
+}
+
+
