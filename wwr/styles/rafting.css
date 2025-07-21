@@ -1,8 +1,10 @@
 /* rafting.css */
+/* This file will hold all the styles for the Afriq Raft website. */
 
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@700&display=swap');
 
+/* Define CSS variables for colors and fonts in the :root pseudo-class */
 :root {
   /* Color Palette */
   --primary-color: #1A4F52;    /* Dark Teal */
@@ -106,13 +108,15 @@ p {
     padding: 1rem 2rem;
     border-radius: 5px;
     text-align: center;
+    width: 90%;
 }
 
 .hero article {
     position: absolute;
     bottom: 2rem;
-    left: 2rem;
-    right: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
     background-color: rgba(26, 79, 82, 0.8); /* Primary color with transparency */
     color: var(--accent2-color);
     padding: 1.5rem;
@@ -193,4 +197,35 @@ footer .socialmedia img:hover {
     transform: scale(1.2);
 }
 
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1rem;
+    }
 
+    header nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .hero article {
+        padding: 1rem;
+    }
+
+    .hero article img {
+        display: none; /* Hide the small image on mobile for more space */
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
