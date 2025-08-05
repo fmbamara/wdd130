@@ -294,7 +294,21 @@ article p br + br {
 }
 
 
-
+/* Special Link Design */
+.footer-center-link a {
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--dark-color);
+    background-color: var(--secondary-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    box-shadow: 0 5px 0 0 #d1b5a8; /* Creates the 3D effect */
+    transition: all 0.2s ease-in-out;
+}
 
 
 /* Footer Styles */
